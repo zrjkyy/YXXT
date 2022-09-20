@@ -1,0 +1,19 @@
+
+/* 个性化登录页样式 */
+@import "login_box_custom.css";
+.logo_txt { line-height: 50px; font-size: 16px; color: #085a8e; }
+body { font-family: "microsoft yahei"; }
+a { text-decoration: none; }
+.left { float: left; }
+.right { float: right; }
+.cl { clear: both; height: 0; line-height: 0; display: block; }
+.ipt-t { height: 40px; line-height: 40px; padding: 0 10px; border: 1px solid #B0C7E1; }
+.ipt-t:hover { border: 1px solid #40A9FF; }
+.fis { position: relative; }
+.language { position: relative; }
+.language a { position: relative; height: 25px; line-height: 25px; padding: 0px 0px 0px 10px; width: 80px; float: left; color: #333; position: relative; }
+.language .arrow { display: inline-block; *display: inline; *zoom: 1; background: url(../image/arrow.gif) no-repeat; width: 9px; height: 5px; overflow: hidden; position: absolute; top: 10px; right: 20px; }
+.language a:hover { color: #333; }
+.languageBox { display: none; z-index: 1000; border: #e2e2e2 1px solid; position: absolute; background: #f9f9f9; width: 88px; top: 30px; left: 0; }
+.languageBox ul li a { COLOR: #555; line-height: 30px; height: 30px; display: block; padding-left: 8px; }
+.languageBox ul li a:hover { BACKGROUND: #eee; COLOR: #888; TEXT-DECORATION: none; }

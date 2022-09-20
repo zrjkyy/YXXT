@@ -1,0 +1,146 @@
+/* reset */
+body{color:#707070;background:#fff; font-family:Verdana, Geneva, sans-serif;line-height:1.666em;}
+body,select,input,button,h1,h2,h3,h4,h5,h6{font-size:12px;}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,form,p,dl,dt,dd,table,th,td,img,blockquote{margin:0;padding:0;border:0;}
+img, div, input{_behavior: url("iepngfix.htc");}
+input,button,textarea,img{line-height:normal;}
+abbr,acronym,address,cite,q,em,code,var,dfn,ins{font-style:normal;text-decoration:none;border:0;}
+q:before,q:after{content:"";}
+ul,ol{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+select,
+button,
+input{vertical-align:middle;}
+.ipt-c,
+.ipt-r{width:16px;height:16px;overflow:hidden;padding:0;margin:0 3px 0 0;}
+a{color:#154077;}
+a:hover{text-decoration:underline;}
+/* 清除浮动 */
+.header,
+.body,
+.footer,
+.part,
+.clear{+zoom:1;}
+.header:after,
+.body:after,
+.footer:after,
+.part:after,
+.clear:after{clear:both;content:".";font-size:0;display:block;height:0;overflow:hidden;visibility:hidden;}
+/* 背景 */
+.login-mod .goto, .login-mod .ipt-b, .login-mod .h2_txt, .logo span, .bg{background-image:url(../image/bg.gif);background-repeat:no-repeat;}
+.login-mod .goto, .login-mod .ipt-b, .login-mod .h2_txt, .logo span, .bg{background-image:url(../image/bg.gif);background-repeat:no-repeat;}
+.h2_txt-en{background-image:url(../image/bg_en.gif);background-repeat:no-repeat;}
+.h2_txt-big5{background-image:url(../image/bg_big5.gif);background-repeat:no-repeat;}
+.login-mod .ipt-t,
+.bgx{background-image:url(../image/bgx.gif);background-repeat:repeat-x;}
+/* 布局 */
+.page{width:900px;margin:auto;}
+/* 页头 */
+.header{padding:10px 0;}
+	/* Logo */
+	.logo{float:left;}
+	.logo img,
+	.logo span{float:left;display:inline;}
+	.logo img{margin-top:2px;margin-right:10px;}
+	.logo span{width:15px;height:50px;background-position:0px -132px;overflow:hidden;}
+	/* 顶部链接 */
+	.toplinks{float:right;line-height:50px;}
+	.toplinks,
+	.toplinks a{color:#8e8e8e;}
+	.toplinks a{margin:0 3px;text-decoration:none;}
+	.toplinks a:hover{text-decoration:underline;}
+/* 主体 */
+.body{}
+	/* 主要部分 */
+	.main-part{position:relative;width:900px;height:440px;overflow:hidden;}
+	.login-page{
+		width: auto;
+	}
+	.main-part.login-part{
+		width:auto;
+		/* min-height: 675px; */
+		height: calc(100vh - 92px);
+	}
+	.login-part .header{
+		width: 1000px;
+		margin: 40px auto 0;
+	}
+	.footer.login-footer{
+		width: 1000px;
+		margin: 15px auto;
+	}
+	.login-page .header .toplinks a,.login-page .header .logo_txt{
+		color: #fff;
+	}
+	.login-page .header .toplinks b{
+		width: 0px;
+		height: 16px;
+		display: inline-block;
+		border-left: 1px solid #fff;
+		vertical-align: sub;
+	}
+	@media screen  and (min-width: 1300px) and (max-width: 1500px){
+		.login-part .header,.footer.login-footer{
+			width: 1100px;
+		}
+	}
+	@media screen  and (min-width: 1501px){
+		.login-part .header,.footer.login-footer{
+			width: 80%;
+		}
+	}
+	.main-part .login-container{
+	}
+	.login-container .login{
+		position: absolute;
+		left: 50%;
+		margin-left: 180px;
+		top: 50%;
+		margin-top: -160px;
+	}
+	.footer-left{
+		float: left;
+	}
+	.footer-right{
+		float: right;
+	}
+		/* 登录框 */
+		.login-mod{position:absolute;top:20px;left:460px;padding:35px 25px;width:424px;height:340px;}
+		.login-mod h2,
+		.login-mod .fi{margin:0 20px;}
+		.login-mod .h2_txt, .login-mod .h2_txt-en, .login-mod .h2_txt-big5{width:145px;height:24px;overflow:hidden; margin-left:20px; margin-bottom:10px; line-height:24px; padding-left:240px}
+		.login-mod .fi{padding:10px 0;}
+		.login-mod .fi-notit{padding-left:56px;position:relative;}
+		.login-mod .fi-notit label{margin-right:20px;}
+		.login-mod label.tit{float:left;padding-right:15px;line-height:29px;color:#666;font-size:14px}
+		.login-mod .ipt-t{width:130px;border:1px solid #9abcdd;padding:6px 4px;font-size:14px;margin-right:10px;font-family:Arial,sans-serif;}
+		.login-mod .ipt-t-focus,
+        .login-mod .ipt-t:focus{background:#FFFFE1}
+		.login-mod .ipt-sample{color:#788F9E;}
+		.login-mod .ipt-b{width:106px;height:35px;font-size:14px;font-weight:bold;color:#FFF;padding:0;border:0;background-position:0 -30px;cursor:pointer;}
+		.login-mod .goto{background-position:-1px -128px;margin-top:20px;padding:20px 0 0 10px;font-size:12px; line-height:24px;filter: Chroma(Color=white);}
+		.login-mod .err{
+	position:absolute;
+	width:145px;
+	height:30px;
+	left:233px;
+	_left:106px;
+	top:164px;
+	color:#D80001;
+	line-height:16px;
+}
+/* 页脚 */
+.footer{text-align:center;}
+.footer,
+.footer a{color:#8e8e8e;}
+.footer span,
+.footer a{margin:0 10px;text-decoration:none;}
+.footer span{font-family:Arial,sans-serif;}
+.footer a:hover{text-decoration:underline;}
+.b-separate {
+	width: 0;
+	height: 16px;
+	display: inline-block;
+	border-left: 1px solid #9b9b9b;
+	vertical-align: sub;
+}

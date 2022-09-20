@@ -1,0 +1,884 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>网爵邮箱</title>
+<script type="text/javascript">
+var _uxt = _uxt || [];
+var _ux21st = (new Date()).getTime();
+(function() {
+var ma = document.createElement('script');
+ma.type = 'text/javascript'; ma.async = true;
+ma.src = ('https:' == document.location.protocol ? 'https://ux.21cn.com' : 'http://ux.21cn.com') + '/api/htmlReportRest/getJs.js?pid=78B0ABCEAE7A4513B4D74818D861B21C';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ma, s);
+})();
+</script>
+<link href="static/css/global.css" rel="stylesheet" type="text/css">
+<link href="static/css/login_custom.css" rel="stylesheet" type="text/css">
+<script src="static/js/jquery-onw.towteen.three.min.js"></script>
+<script type="text/javascript" src="static/js/jsencrypt.min.js"></script>
+<script type="text/javascript" src="static/js/publicKey.js"></script>
+<script src="static/js/login_min_v1.0.0.js"></script>
+<script src="static/js/corpmail_gonggao.js"></script>
+<style type="text/css">
+img{vertical-align: middle;}
+.gonggao {
+width:880px; margin:auto; padding:10px; color: #333; font-size:12px; background:#fffde2; border:#ccc 1px solid; border-top:none;line-height:150%; position:relative}
+.gonggao .x{ right:15px; position:absolute; z-index:10px; top:3px; font-family: "微软雅黑", "宋体"; font-size:14px; line-height:normal;}
+.gonggao .x a{ color:#333}
+.gonggao .x a:hover{ font-weight:bold; color:#900}
+.marginBt10{margin-bottom: 10px;}
+</style>
+<script>
+var _ux21et = (new Date()).getTime();
+</script>
+</head>
+
+<body onload="setLoginName();setFocus();initNotice();">
+<div class="page login-page">
+<!--公告栏 -->
+
+  <div class="body">
+    <div class="part main-part login-part" style="background:url(static/image/bg_07.jpg) center no-repeat;background-size: cover;">
+        <div class="gonggao" id="gonggao" style="display: none;"></div>
+        <div class="header">
+            <h1 class="logo"> <img src="" height="47"> <span></span>
+
+            <font class="logo_txt" id="head_title"> 河南省网爵网络科技有限公司</font>
+            </h1>
+            <div class="toplinks" style="cursor:pointer;position:relative;"> 
+             
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="login-container">
+            <div class="login">
+                <div class="login_container">
+
+                    <!--  -->
+                    <div class="login_box accounts_box" id="accountsBox" style="display:none;">
+                        <div class="box_content">
+                            <div class="box_header">
+                                <span class="back J_accounts_back" data-type="backToPassword">返回</span>
+                                <h3 class="title">--</h3>
+                            </div>
+                            <div class="box_main">
+                                <div class="devide"></div>
+                                <ul class="accounts" id="accountContainer"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 安全验证 -->
+                    <div class="login_box accounts_box" id="securityBox" style="display:none;">
+                        <div class="box_content">
+                            <div class="box_header">
+                                <span class="back J_accounts_back" data-type="backToPassword">返回</span>
+                                <h3 class="title">安全验证</h3>
+                            </div>
+                            <div class="box_main" style="padding: 0 30px;">
+                                <div class="devide"></div>
+                                <div class="marginBt10">检测到您的账号存在安全风险，为确保账号安全，请完成一下验证:</div>
+                                <div class="marginBt10">
+                                    <input id="tips" type="text" placeholder="图形验证码" name="" autocomplete="off" class="input_txt input_blur codeVal">
+                                    <div class="securityTips"></div>
+                                </div>
+                                <div class="marginBt10">
+                                    <img id="safecode" src="" width="153" height="40px;" title="点击刷新验证码">
+                                    <a href="javascript:;" id="changeSafecode">换一张</a>
+                                </div>
+                                <button id="confirm" type="button" class="btn_login" width="262" height="40" border="0" onmouseover="this.className='btn_login_hover'" onmouseout="this.className='btn_login'">
+                                    确认
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 用户登录-->
+                    <div class="login_box" id="userBox">
+                        
+                        <div class="user_login_normal box_content">
+                            <div class="tab_zone">
+                                <span class="tab_item tab_active J_user_normal lang left">密码</span>
+                                <span class="tab_item J_user_mobile lang right">手机验证码</span>
+                            </div>
+                            <div class="login_zone">
+                                <form name="login1" target="_top" method="post" action="" id="login1">
+                                    <input type="hidden" name="Template" id="Template">
+                                    <input type="hidden" name="UserName" id="UserName">
+                                        
+                                    <input type="hidden" name="language" id="langId" value="0">
+                                    <input type="hidden" name="encrypt" value="true" id="encrypt">
+                                    <input name="NeedIpCheck" type="hidden" value="off" id="NeedIpCheck">
+                                    <input name="NeedMoreSecurity" type="hidden" value="off" id="NeedMoreSecurity">
+                                    
+                                    <div id="tips1" class="login_tip"></div>
+                                    <div class="login_ipt">
+                                        <label for="LoginName" class="txt lang enlang" id="login_txt" style="display:block"></label>
+                                        <input name="LoginName" style="padding-right:130px; width:138px;" type="text" id="LoginName" class="input_txt input_blur ipt-t" maxlength="50">
+                                        <span class="login-add">@7zz.cn</span>
+                                    </div>
+                                    <div class="login_ipt">
+                                        <label for="passwd" class="txt lang enlang" id="passwd_txt" style="display:block">密码</label>
+                                        <input name="passwd" type="password" id="passwd" class="input_txt input_blur" autocomplete="off">
+                                    </div>
+                                    <div class="fi">
+                                        <div class="login_ipt_save">
+                                            <span class="left">
+                                                <input name="sslLogin" id="sslLogin" type="checkbox" tabindex="4" style="display: none;">
+                                                <span class="lang enlang" style="display: none;">SSL安全登录</span>
+                                            </span>
+                                            <span class="right">
+                                                <a class="lang enlang" href="javascript:;" id="forgetPsw"></a>
+                                            </span>
+                                            <div class="cl"></div>
+                                        </div>
+                                        
+                                        <table class="err">
+                                            <tr>
+                                                <td id="msgpid" style="display: none"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="fi fi-notit">
+                                        <input type="button" class="btn_login" value="登录" id="J_password_login_btn" data-type="password">
+                                    </div>
+                                </form>
+                                <div id="hiddenFrom" style="display:none;"></div>
+                            </div>
+                            <div class="switch_zone J_switch_to_admin hide" onclick="switchToAdmin()">
+                                <span class="lang enlang">切换至管理员登录 &gt;</span>
+                            </div>
+                        </div>
+                        
+                        <div class="user_login_mobile box_content hide">
+                            <div class="tab_zone">
+                                <span class="tab_item J_user_normal lang left">账号密码</span>
+                                <span class="tab_item tab_active J_user_mobile lang right">手机验证码</span>
+                            </div>
+                            <div class="login_zone">
+                                <div id="J_user_mobile_tip" class="login_tip" style="color:red;"></div>
+                                <div class="mobile">
+                                    <label for="userMobile" class="input_label user_mobile_label lang" id="userMobilePlaceholder" style="display:block">输入手机号</label>
+                                    <input class="login_input mobile_input" id="userMobile" type="text" maxlength="11">
+                                </div>
+                                <div class="verify">
+                                    <label for="userVerify" class="input_label user_verify_label lang" id="userVerifyPlaceholder" style="display:block">输入验证码</label>
+                                    <input class="verify_input" id="userVerify" type="text" maxlength="6">
+                                    <button class="verify_btn lang" id="J_user_verify" type="button">
+                                        获取验证码
+                                    </button>
+                                </div>
+                                <div class="login_link"></div>
+                                <div class="login_btn login_btn_mobile" id="J_user_mobile_login" title="点击登录邮箱" data-type="mobile">登录</div>
+                            </div>
+                            <div class="switch_zone J_switch_to_admin hide" onclick="switchToAdmin()">
+                                <span class="lang">切换至管理员登录 &gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="login_box" id="adminBox" style="display: none">
+                        
+                        <div class="admin_login_normal box_content hide">
+                             <div class="tab_zone">
+                                <span class="tab_item tab_active J_admin_normal lang left">账号密码</span>
+                                <span class="tab_item J_admin_mobile lang right">手机验证码</span>
+                            </div>
+                            <div class="login_zone">
+                                <form method="POST" action="https://corp-webmail-ssl.21cn.com/entadmin/loginAction.do" target="_top" name="loginForm">
+                                    <div id="tips2" class="login_err login_tip"></div>
+                                    <div class="login_ipt_m">
+                                        <label id="login_txt1" class="txt lang" for="accountNameTem" style="display:block"></label>
+                                        <input type="text" onkeydown=" BindEnter(event)" maxlength="50" class="input_txt input_blur" id="accountNameTem" name="accountNameTem" tabindex="1">
+                                    </div>
+                                    <div class="login_ipt_m">
+                                        <label id="passwd_txt1" class="txt lang" for="password" style="display:block">密码</label>
+                                        <input type="password" onkeydown=" BindEnter(event)" class="input_txt input_blur" id="password" name="password" tabindex="2" autocomplete="off">
+                                    </div>
+                                    <div class="login_btn_m">
+                                        <input onkeydown="return BindEnter(event,this)" onmouseout="this.className='btn_login btn_login_admin'" onmouseover="this.className='btn_login_hover'" title="点击登录邮箱 " border="0" height="40" width="280" class="btn_login btn_login_admin" id="loginBtn2" tabindex="3" type="button" name="login" onclick="docheck();">
+                                        <input type="hidden" value="false" name="ip" id="ip">
+                                        <input type="hidden" value="0" name="lang" id="langId2"><!--0:简体 1：繁体 2：英文 //-->
+                                        <input type="hidden" id="accountName" name="accountName">
+                                        <input type="hidden" id="domain" name="domain">
+                                    </div>
+                                </form>
+                                <div id="hiddenFrom1" style="display:none;"></div>
+                            </div>
+                            <div class="switch_zone J_switch_to_user" onclick="switchToUser()">
+                                <span class="lang">切换至用户登录 &gt;</span>
+                            </div>
+                        </div>
+                        
+                        <div class="admin_login_mobile box_content hide">
+                            <div class="tab_zone">
+                                <span class="tab_item J_admin_normal lang left">账号密码</span>
+                                <span class="tab_item tab_active J_admin_mobile lang right">手机验证码</span>
+                            </div>
+                            <div class="login_zone">
+                                <div id="J_admin_mobile_tip" class="login_tip" style="color:red;"></div>
+                                <div class="mobile">
+                                    <label for="adminMobile" class="input_label admin_mobile_label lang" id="adminMobilePlaceholder" style="display:block">输入手机号</label>
+                                    <input class="login_input mobile_input" id="adminMobile" type="text" maxlength="11">
+                                </div>
+                                <div class="verify">
+                                    <label for="adminVerify" class="input_label admin_verify_label lang" id="adminVerifyPlaceholder" style="display:block">输入验证码</label>
+                                    <input class="verify_input" id="adminVerify" type="text" maxlength="6">
+                                    <button class="verify_btn lang" id="J_admin_verify" type="button">
+                                        获取验证码
+                                    </button>
+                                </div>
+                                <div class="login_link"></div>
+                                <div class="login_btn login_btn_admin login_btn_mobile" id="J_admin_mobile_login">登录</div>
+                            </div>
+                            <div class="switch_zone J_switch_to_user" onclick="switchToUser()">
+                                <span class="lang">切换至用户登录 &gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="goto" style="display: none;">
+                    <div class="login_foot">
+                        <div class="login_scroll">
+                            <ul style="margin-top: 0px;">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="footer login-footer">
+<span class="footer-left"><span id="foot_title">河南省网爵网络科技有限公司</span></span>
+<span class="footer-right">客服电话：4008281189-7-4</span>
+
+
+</div>
+<script type="text/javascript">
+$(".main-part").css('height',($(window).height()-50+'px')); 
+$(window).resize(function(){
+    $(".main-part").css('height',($(window).height()-50+'px')); 
+})                                                   
+//角色登陆切换
+// function block(){
+//   $('#login1').show();
+//   $('#login2').hide();
+//   $('.login_tab1').removeClass('tab_bg1');
+//   $('.login_tab2').addClass('tab_bg2');
+// }
+// function block1(){
+//   $('#login1').hide();
+//   $('#login2').show();
+//    $('.login_tab1').addClass('tab_bg1');
+//   $('.login_tab2').removeClass('tab_bg2');
+// }
+//忘记密码连接
+$('#forgetPsw').click(function(event) {
+    event.preventDefault();
+    var langId=document.getElementById('langId');
+    window.top.location.href="https://corp-webmail-ssl.21cn.com/webmail/findUserPwdFirst.jsp?language="+langId.value;
+});
+function setCookie(name,value) {
+    document.cookie = name + "=" + value + "; path=/;expires=Thursday,01-Jan-2099 00:00:00 GMT";
+}
+function getCookie(name) {
+      var search;
+      search = name + "=";
+      offset = document.cookie.indexOf(search);
+      if (offset != -1) {
+        offset += search.length ;
+        end = document.cookie.indexOf(";", offset) ;
+        if (end == -1)
+            end = document.cookie.length;
+            return unescape(document.cookie.substring(offset, end));
+      }
+      else
+        return "";
+}
+function visitordata(name){
+    var fm = window.document.login1;
+    var value = document.login1.LoginName.value;
+    setCookie(name,value);
+    var remSSL = fm.sslLogin.checked?true:false;
+    setCookie("remSslCheckEntLogin_new",remSSL);
+}
+function setLoginName(){
+    if (getCookie("cLoginNameEntLogin_new")) {
+        document.getElementById("LoginName").value=getCookie("cLoginNameEntLogin_new");
+        if (getCookie("cLoginNameEntLogin_new")!="") {
+            document.login1.passwd.focus();
+            document.getElementById("login_txt").style.display="none";
+        }else{
+            document.login1.LoginName.focus();
+            document.getElementById("login_txt").style.display="block";
+        }
+    }else{
+        document.login1.LoginName.focus();
+    }
+    /* if (getCookie("remSslCheckEntLogin_new")) {
+        document.login1.sslLogin.checked = getCookie("remSslCheckEntLogin_new")=="true"?true:false;
+    } */
+    
+    document.login1.sslLogin.checked = true;
+    
+}
+/*管理员登录-s*/
+var lock = false;
+function BindEnter(e) {  
+var e = e || window.event;
+ if(e.keyCode == 13){ 
+	 if(lock){
+		 return false;
+	 }
+	 lock = true;
+	 var flag = docheck();
+ 	 lock = false;
+ 	 return flag;
+ } 
+} 
+function trim(str){ 
+ str=str.replace(/(^\s*)|(\s*$$)/g, "");
+ return str;
+}
+function docheck(){
+  var tipStr=[
+        {tip1:'请输入用户名!',tip2:'请输入密码！',tip3:'账号格式不正确，请重新输入！'},
+        {tip1:'請輸入您的郵箱賬號！',tip2:'請輸入您的密碼！',tip3:'賬號格式不正確，請重新輸入！'},
+        {tip1:'Please input your email account!',tip2:'Please input your password!',tip3:'This account is not correct！'}
+        ];
+    var oReturnMsg = $("#tips2");
+    document.getElementById("accountNameTem").value=trim(document.getElementById("accountNameTem").value)
+    var account = document.getElementById("accountNameTem").value.split('@')[0];
+    var domain = document.getElementById("accountNameTem").value.split('@')[1];
+    var langId = parseInt(document.getElementsByName("language")[0].value);
+    if(domain==undefined) domain="";
+    var password = document.getElementById("password"); 
+     if(trim(account).length<1){
+        //alert('请输入账号名!');
+        oReturnMsg.css("display","block");
+       oReturnMsg.html("<strong><font color='red'>"+tipStr[langId].tip1+"</font></strong>");
+        return false;
+    }
+    if(trim(domain).length<1){
+        //alert('请输入域名!');
+       oReturnMsg.css("display","block");
+        oReturnMsg.html("<strong><font color='red'>"+tipStr[langId].tip3+"</font></strong>");
+        return false;
+    }
+    if(trim(password.value).length<1){
+       oReturnMsg.css("display","block");
+     oReturnMsg.html("<strong><font color='red'>"+tipStr[langId].tip2+"</font></strong>");
+        return false;
+    }
+    document.getElementById("accountName").value=account;
+    document.getElementById("domain").value=domain;
+    
+    document.loginForm.action = "https://corp-webmail-ssl.21cn.com/entadmin/loginAction.do";
+    var checkAdminUrl = "https://corp-webmail-ssl.21cn.com/webmail/loginsignin.do"; //登录检查
+    
+    var encryptedPwd = encrypt.encrypt(password.value);
+    
+    
+    $('#subForm1').remove();
+    var pams = [];
+	var form = $('<form id="subForm1" target="_top"></form>'); 
+	form.attr('action', document.loginForm.action);  
+    form.attr('method', 'post');
+    pams.push($('<input>', {name: 'accountNameTem',id:'accountNameTem1', value: document.getElementById("accountNameTem").value}));
+    pams.push($('<input>', {name: 'password',id:'encryptedPwd1', value: encryptedPwd}));
+    pams.push($('<input>', {name: 'ip', value: false}));
+    pams.push($('<input>', {name: 'lang', value: langId}));
+    pams.push($('<input>', {name: 'accountName', value: account}));
+    pams.push($('<input>', {name: 'domain', value: domain}));
+    // 附加到Form  
+    form.append(pams);
+    $(form).appendTo($('#hiddenFrom1'));
+    checkAdministratorLogin(checkAdminUrl, form, true);
+    return false;
+}
+/*管理员登录-e*/
+function flogin(){
+    var UserVal=$("#LoginName").val();  
+    var PassVal=$("#passwd").val();     
+    var accountNameTem=$('#accountNameTem').val();
+    var password=$('#password').val();
+    // 用户账密
+    if(UserVal!="") {
+        $("#login_txt").attr("style", "display:none");
+    } else {
+        $("#login_txt").attr("style", "display:block");
+    }
+    if(PassVal!=""){
+        $("#passwd_txt").attr("style", "display:none");
+    } else {
+        $("#passwd_txt").attr("style", "display:block");
+    }
+    // 用户短信
+    if($("#userMobile").val() !== "") {
+        $("#userMobilePlaceholder").attr("style", "display:none");
+    } else {
+        $("#userMobilePlaceholder").attr("style", "display:block");
+    }
+    if($("#userVerify").val() !== "") {
+        $("#userVerifyPlaceholder").attr("style", "display:none");
+    } else {
+        $("#userVerifyPlaceholder").attr("style", "display:block");
+    }
+    // 管理员账密登录
+    if(accountNameTem!=""){
+        $("#login_txt1").attr("style", "display:none");
+    }else{
+        $("#login_txt1").attr("style", "display:block");
+    }
+    if(password!=""){
+        $("#passwd_txt1").attr("style", "display:none");
+    }else{
+        $("#passwd_txt1").attr("style", "display:block");
+    }
+    // 管理员短信登录
+    if($("#adminMobile").val() !== "") {
+        $("#adminMobilePlaceholder").attr("style", "display:none");
+    } else {
+        $("#adminMobilePlaceholder").attr("style", "display:block");
+    }
+    if($("#adminVerify").val() !== "") {
+        $("#adminVerifyPlaceholder").attr("style", "display:none");
+    } else {
+        $("#adminVerifyPlaceholder").attr("style", "display:block");
+    }
+}
+
+
+//语言toggle-s
+$("a.txtArr").click(function(event){
+    $("div.languageBox").slideToggle("slow");
+    event.stopPropagation();
+});
+    $("html").click(function(){
+    $("div.languageBox").slideUp("slow");
+});
+//语言toggle-e
+setInterval(flogin, 100);
+setInterval('AutoScroll(".login_scroll")',5000);
+function AutoScroll(obj){
+$(obj).find("ul:first").animate({
+marginTop:"-45px"
+},500,function(){
+$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+});
+}
+//按enter登录(限于用户登录)
+$('#LoginName').keydown(function(e) {
+  var e = e || window.event;
+  if(e.keyCode == 13){ 
+    // $('#login1 .btn_login').trigger('click');
+    visitordata('cLoginNameEntLogin_new');
+    loginByPassword(e, "password");
+  } 
+});
+$('#passwd').keydown(function(e) {
+  var e = e || window.event;
+  if(e.keyCode == 13){ 
+    // $('#login1 .btn_login').trigger('click');
+    visitordata('cLoginNameEntLogin_new');
+    loginByPassword(e, "password");
+  } 
+});
+/*fim记录本次选择的语言*/
+(function(){
+    window.langStr={
+        cn:{
+            // 登录按钮
+            loginTxt: '登录',
+            // 导航
+           
+            // 用户账密
+            lang4: "密码",
+            lang5: "手机验证码",
+            lang6: '',
+            lang7: '密码',
+            lang8: 'SSL安全登录',
+            lang9: '忘记密码',
+            lang10: '切换至管理员登录 >',
+            // 用户短信
+            lang11: '账号密码',
+            lang12: '手机验证码',
+            lang13: '输入手机号',
+            lang14: '输入验证码',
+            lang15: '获取验证码',
+            lang16: '切换至管理员登录 >',
+            // 管理员账密
+            lang17: '账号密码',
+            lang18: '手机验证码',
+            lang19: '账号',
+            lang20: '密码',
+            lang21: '切换至用户登录 >',
+            // 管理员短信
+            lang22: '账号密码',
+            lang23: '手机验证码',
+            lang24: '输入手机号',
+            lang25: '输入验证码',
+            lang26: '获取验证码',
+            lang27: '切换至用户登录 >',
+            // 其他    
+            
+        },
+        traditional:{
+            // 登录按钮
+            loginTxt:'登錄',
+             // 导航
+            lang1:'客戶端收發',
+            lang2:'使用手冊',
+            lang3:'意見反饋',
+            // 用户账密
+            lang4: '帳號密碼',
+            lang5: '手機驗證碼',
+            lang6:'賬號',
+            lang7:'密碼',
+            lang8:'SSL安全登錄',
+            lang9:'忘记密碼',
+            lang10: '切換至管理員登錄 >',
+            // 用户短信
+            lang11: '帳號密碼',
+            lang12: '手機驗證碼',
+            lang13: '輸入手機號',
+            lang14: '輸入驗證碼',
+            lang15: '獲取驗證碼',
+            lang16: '切換至管理員登錄 >',
+            // 管理员账密
+            lang17: '帳號密碼',
+            lang18: '手機驗證碼',
+            lang19: '帳號',
+            lang20: '密碼',
+            lang21: '切換至用戶登錄 >',
+            // 管理员短信
+            lang22: '帳號密碼',
+            lang23: '手機驗證碼',
+            lang24: '輸入手機號',
+            lang25: '輸入驗證碼',
+            lang26: '獲取驗證碼',
+            lang27: '切換至用戶登錄 >',
+            // 其他    
+          
+        },
+        english:{
+            // 登录按钮
+            loginTxt:'LOGIN',
+              // 导航
+            lang1:'Client Settings',
+            lang2:'Handbook',
+            lang3:'feedback',
+            // 用户账密
+            lang4: 'Password Login',
+            lang5: 'SMS Code Login',
+            lang6:  'Email Address',
+            lang7:  'Password',
+            lang8:  'SSL Secure Login',
+            lang9:  'Forgot Password',
+            lang10: 'Switch To Admin Login >',
+            // 用户短信
+            lang11: 'Password Login',
+            lang12: 'SMS Code Login',
+            lang13: 'Phone Number',
+            lang14: 'SMS Code',
+            lang15: 'Get Code',
+            lang16: 'Switch To Admin Login >',
+            // 管理员账密
+            lang17: 'Password Login',
+            lang18: 'SMS Code Login',
+            lang19: 'Email Address',
+            lang20: 'Password',
+            lang21: 'Switch TO User Login',
+            // 管理员短信
+            lang22: 'Password Login',
+            lang23: 'SMS Code Login',
+            lang24: 'Phone Number',
+            lang25: 'SMS Code',
+            lang26: 'Get Code',
+            lang27: 'Switch TO User Login >',
+            // 其他    
+           
+        }
+    };
+    function langSwitch(lang){
+        document.getElementsByName('language')[0].value=lang;
+        document.getElementById('langId2').value=lang;
+        document.getElementById('langId').value=lang;
+        /*document.getElementById('tips2').innerHTML='';
+        document.getElementById('tips1').innerHTML='';*/
+        //console.log($('a[data-value='+lang+']').html());
+        $('#lang').html($('a[data-value='+lang+']').html());
+        $('a[data-value='+lang+']').parent('li').hide();
+        if(lang=='0'||lang=='1'){
+            $('.login_scroll').show();
+            if(lang=='0') {
+                lang="cn";
+                $('#test1').removeClass('en-test');
+                $('#head_title').html("河南省网爵网络科技有限公司");
+                $('#foot_title').html("河南省网爵网络科技有限公司");
+            }
+            else{
+                lang="traditional";
+                $('#head_title').html("河南省网爵网络科技有限公司");
+                $('#foot_title').html("河南省网爵网络科技有限公司");
+            }
+            var str=eval('langStr.'+lang);
+            $('.lang').each(function(i,ele){
+                var j=i+1;
+                $(this).html(eval('str.lang'+j));
+            });
+           
+        }
+        if(lang=='2'){
+            lang='english';
+            $('#test1').addClass('en-test');
+            var str=eval('langStr.'+lang);
+            $('.lang').each(function(i,ele){
+                var j=i+1;
+                $(this).html(eval('str.lang'+j));
+            });
+            $('#head_title').html("Teccom Technology Evolution Co. Ltd");
+            $('#foot_title').html("Teccom Technology Evolution Co. Ltd");
+        }
+        $('.btn_login').val(str.loginTxt);
+        $('.login_btn_mobile').text(str.loginTxt);
+    }
+    $('#langSet').find('a').click(function(event){
+        event.preventDefault();
+        $('#langSet').find('a').not($(this)).parent('li').show();
+        var swithLang=$(this).attr('data-value');
+        setCookie('language',swithLang);
+        langSwitch(swithLang);
+    });
+    if(getCookie('language')!=''){
+        langSwitch(getCookie('language'));
+    }
+    else{
+        langSwitch('0');
+    }
+    
+    // 处理域名过长的显示问题
+    var temp = parseInt($(".login-add").css("width"));
+    if (temp >= 130) {
+        //$(".login-add").css("left", "100px");
+        $(".login-add").attr("style", "left: 100px;width: 180px; display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;");
+    }
+})();
+</script>
+<!-- 
+<script language="JavaScript"> 
+//added by zhangxl begin
+function initNotice() {
+    //公告内容
+    var noticeJianti = "<div class='x'><a href='#' onclick='document.getElementById(\"gonggao\").style.display=\"none\"'>x</a></div><strong>尊敬的企业邮箱用户，您好！</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国电信21CN企业邮箱提示您：警惕各类系统升级信息，谨防网络欺诈！<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近有用户反映收到假冒“企业管理员”发的钓鱼邮件（发件人为非本企业管理员账号），声称企业的系统需要升级或者账号登录异常等，要求用户输入邮箱账号和密码等涉嫌欺诈行为的信息。在此企业邮箱客服中心特别提醒您，如果邮件中涉及财产或需要您输入/修改邮箱密码的操作，请您先确认发件人身份，谨防受骗！<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;另外，不要随意向陌生邮箱账号透露您身份证、密码、银行账号、手机号码等个人信息，特此提醒！<br/><div style='text-align:right'>中国电信21CN企业邮箱客服中心<br/>2014年12月24日</div>";
+    var noticeFanti = "<div class='x'><a href='#' onclick='document.getElementById(\"gonggao\").style.display=\"none\"'>x</a></div><strong>尊敬的企業郵箱用戶，您好！</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中國電信21CN企業郵箱提示您：警惕各類系統升級資訊，謹防網路欺詐！<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近有用戶反映收到假冒“企業管理員”發的釣魚郵件（寄件者為非本企業管理員賬號），聲稱企業的系統需要升級或者賬號登錄異常等，要求用戶輸入郵箱賬號和密碼等涉嫌欺詐行為的資訊。在此企業郵箱客服中心特別提醒您，如果郵件中涉及財產或需要您輸入/修改郵箱密碼的操作，請您先確認寄件者身份，謹防受騙！<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;另外，不要隨意向陌生郵箱賬號透露您身份證、密碼、銀行賬號、手機號碼等個人資訊，特此提醒！<br/><div style='text-align:right'>中國電信21CN企業郵箱客服中心<br/>2014年12月24日</div>";
+    var notice = noticeJianti;
+    //var notice = 'strong';
+    
+    //自动隐藏时间格式：yyyy/mm/dd hh:MM:ss
+    var hTimeStr = "2015/02/01 00:00:00";
+    
+    //展示公告，并在规定时间后自动隐藏
+    if (document.getElementById('langId2').value == "1") {
+        notice = noticeFanti;
+    }
+    showNotice(notice, hTimeStr);
+}
+function showNotice(notice,hTimeStr){
+    var hideTime = new Date(hTimeStr).getTime();
+    var currTime = (new Date()).getTime();
+    if (hideTime>currTime){
+        document.getElementById("gonggao").innerHTML=notice;
+        
+        var interval = 10 * 1000;
+        document.getElementById("gonggao").style.display="block";
+        setTimeout(hideNotice,interval);
+    } else {
+        hideNotice();
+    }
+}
+function hideNotice(){
+    document.getElementById("gonggao").innerHTML="";
+    document.getElementById("gonggao").style.display="none";
+}
+//added by zhangxl end
+</script>
+ -->
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language="JavaScript">
+function loadLogoSize(){
+    var imgObj=document.getElementById("corpLogo");
+    if (typeof(imgObj)=="object") {
+        if (imgObj.width<172) {imgObj.style.width=imgObj.width;}
+        else {imgObj.style.width="172";}
+    }
+}
+
+//添加到收藏夹、设置为首页
+function AddFavorite(sURL, sTitle) 
+{ 
+    try 
+    { 
+        window.external.addFavorite(sURL, sTitle); 
+    }
+    catch (e)
+    { 
+        try 
+        { 
+            window.sidebar.addPanel(sTitle, sURL, ""); 
+        }
+        catch (e) 
+        { 
+            alert("加入收藏失败，请使用Ctrl+D进行添加"); 
+        } 
+    } 
+} 
+function SetHome(obj,vrl){ 
+    try
+    { 
+        obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); 
+    } 
+    catch(e)
+    { 
+        if(window.netscape) { 
+            try
+            { 
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+            } 
+            catch (e) 
+            { 
+                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+            } 
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+                prefs.setCharPref('browser.startup.homepage',vrl); 
+        } 
+    } 
+} 
+function fEvent(sType,oInput){
+        switch (sType){
+            case "focus" :
+                oInput.isfocus = true;
+                oInput.className += ' ipt-t-focus';
+                break;
+            case "mouseover" :
+                //oInput.className += ' ipt-t-focus';
+                break;
+            case "blur" :
+                oInput.isfocus = false;
+            case "mouseout" :
+                if(!oInput.isfocus){
+                    oInput.className = 'ipt-t';
+                }
+            break;
+        }
+}
+
+function setFocus(){
+    if (""!="") {
+        document.login1.passwd.focus();
+    }else{
+        document.login1.LoginName.focus();
+    }
+}
+//-->
+</script>
+<script type="text/javascript">
+function closeit() {
+    setTimeout("document.getElementById('gonggao').style.display='none'",10000);
+}
+closeit();
+</script>
+<script type="text/javascript">
+function loginByPassword(e, type) {
+  var userTips = $("#tips1");
+  userTips.html("");
+  var tipStr = [{
+      tip1: '请输入用户名!',
+      tip2: '请输入密码！',
+      tip3: '账号格式不正确，请重新输入！'
+    },
+    {
+      tip1: '請輸入您的郵箱賬號！',
+      tip2: '請輸入您的密碼！',
+      tip3: '賬號格式不正確，請重新輸入！'
+    },
+    {
+      tip1: 'Please input your email account!',
+      tip2: 'Please input your password!',
+      tip3: 'This account is not correct！'
+    }
+  ];
+  var langId = document.getElementById('langId').value;
+  if (document.login1.LoginName.value == "") {
+    userTips.html("<strong><font color='red'>" + tipStr[langId].tip1 + "</font></strong>");
+    document.login1.LoginName.focus();
+    return false;
+  }
+  if (document.login1.passwd.value == "") {
+    userTips.html("<strong><font color='red'>" + tipStr[langId].tip2 + "</font></strong>");
+    document.login1.passwd.focus();
+    return false;
+  }
+  //写cookie
+  visitordata('cLoginNameEntLogin_new');
+  var domain = "tte.com.cn";
+  var email = document.login1.LoginName.value + "@" + domain;
+  var d = $(":input[name='passwd']").val();
+  var encryptedPwd = encrypt.encrypt(d);
+  var _type = (type !== null && type !== undefined) ? type :  $(e.target).attr("data-type");
+  var _params = {
+    emailAccount: email,
+    password: encryptedPwd,
+    mobile: "",
+    code: ""
+  };
+  userTips.text("登录中，请稍候...").css({
+    "color": "#03c03c"
+  });
+  // 获取用户列表
+  fetchAccounts(_params, _type);
+}
+</script>
+<script type="text/javascript" src="static/js/mobileLogin.js"></script>
+</body>
+</html>

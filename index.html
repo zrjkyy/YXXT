@@ -1,0 +1,81 @@
+
+
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+        <meta http-equiv="expires" content="0">
+        <meta name="keywords" content="21CN 企业邮箱">
+        <meta name="description" content="21CN 企业邮箱">
+        <title>网爵邮箱</title>
+    </head>
+
+    
+
+    <script>
+    function SetHeight() {
+        //if (document.body.clientHeight > 630 ) {
+            document.getElementById("setBodyId").height=document.body.clientHeight;
+            document.getElementById("loginPage").height=document.body.clientHeight;
+        //} else {
+        //    document.getElementById("setBodyId").height=document.documentElement.clientHeight;
+        //}
+    }
+    function Center() {
+	    var h1=document.documentElement.clientHeight;
+	    var w1=document.documentElement.clientWidth;
+	    if (w1>1600) {
+	        document.getElementById("loginPage").style.marginLeft="-800px";
+	        document.getElementById("loginPage").style.left="50%";
+	        document.getElementById("loginPage").style.width="1600px";
+	    } else {
+	        document.getElementById("loginPage").style.marginLeft="0";
+	        document.getElementById("loginPage").style.left="0";
+	        document.getElementById("loginPage").style.width="100%";
+	    }
+	    if (h1>=600) {
+	        document.getElementById("loginPage").style.position="absolute";
+	        document.getElementById("loginPage").style.top="50%";
+	        document.getElementById("loginPage").style.marginTop="-310px";
+	    } else {
+	        document.getElementById("loginPage").style.position="relative";
+	        document.getElementById("loginPage").style.top="0";
+	        document.getElementById("loginPage").style.marginTop="0px";
+	    }
+    }
+    // IE8兼容startWith方法
+    // if (document.location.href.startsWith("http://mail.chinachant.com")) {
+    // 	document.location.href = "https://mail.chinachant.com/";
+    // }
+    var reg = new RegExp("^" + "http://mail.chinachant.com");
+    if (reg.test(document.location.href)) {
+    	document.location.href = "https://mail.chinachant.com/";
+    }
+    reg = new RegExp("^" + "http://mail.davco.cn");
+    if (reg.test(document.location.href)) {
+        document.location.href = "https://mail.davco.cn/";
+    }
+    reg = new RegExp("^" + "http://mail.parexgroup.cn");
+    if (reg.test(document.location.href)) {
+        document.location.href = "https://mail.parexgroup.cn/";
+    }
+    reg = new RegExp("^" + "http://mail.galc.com.cn");
+    if (reg.test(document.location.href)) {
+        document.location.href = "https://mail.galc.com.cn/";
+    }
+    reg = new RegExp("^" + "http://mail.sinhmicro.com.cn");
+    if (reg.test(document.location.href)) {
+        document.location.href = "https://mail.sinhmicro.com.cn/";
+    }
+    reg = new RegExp("^" + "http://mail.bestpay.com.cn");
+    if (reg.test(document.location.href)) {
+        document.location.href = "https://mail.bestpay.com.cn/";
+    }
+    </script>
+
+    <body style="margin-top:0px;margin-left:0px;margin-right:0px;margin-bottom:0px;overflow-y: hidden;" id="setBodyId" onresize="SetHeight();">
+        <iframe frameborder="0" height="100%" width="100%" name="loginPage" id="loginPage" src="toIndiviPage.html"></iframe>
+    </body>
+
+</html>
